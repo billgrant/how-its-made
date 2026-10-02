@@ -90,7 +90,6 @@ Commit before building. melange records the recipe's git commit in the package m
 ### 4. Test
 
 ```bash
-mkdir -p $PWD/packages/aarch64
 melange test gojq.yaml --arch aarch64 --runner docker --repository-append ./packages --keyring-append melange.rsa.pub
 ```
 
