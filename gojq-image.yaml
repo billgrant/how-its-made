@@ -1,0 +1,25 @@
+contents:
+    repositories:
+      - "https://packages.wolfi.dev/os"
+      - "@local ./packages"
+    keyring:
+      - "https://packages.wolfi.dev/os/wolfi-signing.rsa.pub"
+      - "./melange.rsa.pub"
+    packages:
+      - gojq@local
+      - wolfi-baselayout
+
+entrypoint:
+  command: /usr/bin/gojq
+
+accounts:
+  groups:
+    - groupname: nonroot
+      gid: 65532
+  users:
+    - username: nonroot
+      uid: 65532
+  run-as: nonroot
+
+archs:
+- aarch64

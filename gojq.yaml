@@ -1,0 +1,50 @@
+package:
+  name: gojq
+  version: "0.12.19"
+  epoch: 0
+  description: "Pure Go implementation of jq"
+  copyright:
+    - license: MIT
+
+vars:
+  go-version: "1.27"
+
+environment:
+  contents:
+    repositories:
+      - "https://packages.wolfi.dev/os"
+    keyring:
+      - "https://packages.wolfi.dev/os/wolfi-signing.rsa.pub"
+    packages:
+      - "go-${{vars.go-version}}"
+
+pipeline:
+  - uses: git-checkout
+    with:
+      repository: https://github.com/itchyny/gojq
+      tag: v${{package.version}}
+      expected-commit: b7ebffbfc038677520df0bae4c8c2d877f88ffea
+  - uses: go/build/v2
+    with:
+      packages: ./cmd/gojq
+      output: gojq
+      ldflags: -X github.com/itchyny/gojq/cli.revision=$(git rev-parse --short HEAD)
+
+test:
+  environment:
+    contents:
+      repositories:
+        - "https://packages.wolfi.dev/os"
+      keyring:
+        - "https://packages.wolfi.dev/os/wolfi-signing.rsa.pub"
+      packages:
+        - busybox
+  pipeline:
+    - name: Get version
+      runs: |
+        gojq --version | grep -F ${{package.version}}
+    - name: Does it work
+      runs: |
+        result=$(echo '{"a":1}' | gojq .a )
+        [ "$result" = 1 ]
+

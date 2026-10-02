@@ -1,0 +1,12 @@
+# Signing keys: generate your own with `melange keygen`
+melange.rsa
+melange.rsa.pub
+
+# Build output
+packages/
+*.tar
+sbom-*.json
+
+# Personal, not published
+journal/
+CLAUDE.local.md

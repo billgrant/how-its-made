@@ -1,0 +1,94 @@
+{
+  "version": "v1",
+  "config": {
+    "name": "gojq-image.yaml",
+    "checksum": "sha256-Lqo9Y0l3FpljC7rSlknNLL1KdU67ezxNeTcg+3G5wbY="
+  },
+  "contents": {
+    "keyring": [
+      {
+        "name": "./melange.rsa.pub",
+        "url": "./melange.rsa.pub",
+        "content": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAwXmSRUlxoqy7h5Cg8STY\nL5x9sLMmbarJKxG9EC8Pb4+nLQhL4vQ8mt9iYM2GgziHRiyl6ewO+Fl8BDQRXK6F\nbvMxcCWZPLgvZK8q1KPNsLgTO5tG8Bp66HufLdWTO6JjbnNv/pwpzRPgr9fesE2p\nk3HL/lgxaFul38qQ25Gdvhjj8v7Mbk9TKJu5FH6UaLaPbG9ic6PET8d0fT9WHT+J\nFJzfUHqN0sRMfp1KsLpFQoYkS1EfYkIJoFBAYAErGXEdZKSjrYOow6m0FpCvZWFu\nEgvmNnk38CqZOUgqsMYD2oPQo11TFwaWcZ1ce0he3gzl7BZpuqTkexaJEnqVgx41\nFIWCl0hd/+4DliOMC3DQproNsWoi8aO0/fxpmKJOp2/2dASqqtRowxLtEJDPFbhW\n5d4QHpdZtTJmgXi1hPQo23B08JD//9LBKB7DQ+UZNK4CTNSQSJr7VgqOa0AvRbdr\nkRrHoRQt7XTuLW0A4kFQMQmqx8JfIvgsRvlLQBv8Xq9L/EAUv4aINfRpuTJnD3uj\nOAWXa/LVt47/0nVCVjItreAjA6/dE5IL5EFRSWUv6dvAz7bKk5yO27i288OCMHPs\n+lRHyZdsAomMXjMBMMLwLuq/EUEN/LDJ7z2tWK4ZgjARqojI643CFZqE4YsBnQWw\nYonWzdB07mQSYrrDY37PYMECAwEAAQ==\n-----END PUBLIC KEY-----\n"
+      },
+      {
+        "name": "packages.wolfi.dev/os/wolfi-signing.rsa.pub",
+        "url": "https://packages.wolfi.dev/os/wolfi-signing.rsa.pub",
+        "content": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA5qQUHmzqX9oa/RS3OSgL\nYTYB1mzvVmnWC0JXsAafdgRkavJ9xRhsXMKXWPKMghZw6UnkxuxQCZlB9UhaFqed\nX7SWfQ8qRgECFmdGUjoeV7P3VUkg17RU0mUKsXZZF/2mU+jCGyk5eweKcLWrk6bn\nlNNF1vBJ9EXbHdfvbQsA5GfLku5tJhqRJ4FVQAGCw+1JoSKu+o3q+6xP7z6kMfR9\ncp54FSj48rTJUibbAv+cPtZ3AnbpjdyarV7SYMfxp14Q/KR0CJYDihG3CFoU+TaM\ndr7LUrgXaYw7m7g8hA2PY1jF8aqDqVFjVu/csPKnKVQSqNHfm4C4gljwT6TDVhPe\n6xKSGKfAUNvHx2RIqSsZJCh68Af+VnfuimbHMYzGhzV4/efihpJlYsDnOXJj/PeY\nSbEIYG2yoI3AYvDFyFX2OAOtQ9d4TPs4zS4aDg4R3UseXLib46FX3ZTfIi1/W0IO\neC3AFU5mK+02jq+7swcGbgzem30dFA/B3n8NQExJjF2WlGNJxFw2WnJQqKIkIh0s\nkm5jaxJ28xYgik+bEgxy1LsilKTowdkbEPRKv36JGdap4dOEGR+LwZsM+ontF1AO\nwY6tvwtZKJWhgj7ES3BdtiC1GA2htFnP90lA7KnKbSMOxwWtSCH8spitdPdzgI8G\nSxrOb0SZs6ZFAxYYe3GlvS0CAwEAAQ==\n-----END PUBLIC KEY-----\n"
+      }
+    ],
+    "build_repositories": [],
+    "runtime_repositories": [],
+    "repositories": [
+      {
+        "name": "packages.wolfi.dev/os/aarch64",
+        "url": "https://packages.wolfi.dev/os/aarch64/APKINDEX.tar.gz",
+        "architecture": "aarch64"
+      },
+      {
+        "name": "./packages/aarch64",
+        "url": "./packages/aarch64/APKINDEX.tar.gz",
+        "architecture": "aarch64"
+      }
+    ],
+    "packages": [
+      {
+        "name": "gojq",
+        "url": "./packages/aarch64/gojq-0.12.19-r0.apk",
+        "version": "0.12.19-r0",
+        "architecture": "aarch64",
+        "signature": {
+          "range": "bytes=0-689",
+          "checksum": "sha1-OeQaaifS/nMkOxnszoMvRFJMtOE="
+        },
+        "control": {
+          "range": "bytes=690-6087",
+          "checksum": "sha1-74IN48gf9wZtKtzMaI3A0pV829k="
+        },
+        "data": {
+          "range": "bytes=6088-1892155",
+          "checksum": "sha256-1pBpg0o/J1ofGMVaQqHeOH5PpGCnTWXr7x43lSGFskI="
+        },
+        "checksum": "Q174IN48gf9wZtKtzMaI3A0pV829k="
+      },
+      {
+        "name": "wolfi-baselayout",
+        "url": "https://packages.wolfi.dev/os/aarch64/wolfi-baselayout-20230201-r30.apk",
+        "version": "20230201-r30",
+        "architecture": "aarch64",
+        "signature": {
+          "range": "",
+          "checksum": ""
+        },
+        "control": {
+          "range": "bytes=0-2022",
+          "checksum": "sha1-aF/6XzN/J9leZvrqW26UuNZ1IXw="
+        },
+        "data": {
+          "range": "bytes=2023-13963",
+          "checksum": "sha256-A+qVu/YUl+qkViUwFJNkxVXYCUuDeB+T7MaTy8Xgwl0="
+        },
+        "checksum": "Q1aF/6XzN/J9leZvrqW26UuNZ1IXw="
+      },
+      {
+        "name": "ca-certificates-bundle",
+        "url": "https://packages.wolfi.dev/os/aarch64/ca-certificates-bundle-20260909-r2.apk",
+        "version": "20260909-r2",
+        "architecture": "aarch64",
+        "signature": {
+          "range": "",
+          "checksum": ""
+        },
+        "control": {
+          "range": "bytes=0-9236",
+          "checksum": "sha1-pd7MNLZ6Hhu/zDZ7K+4UO3H8o+I="
+        },
+        "data": {
+          "range": "bytes=9237-118423",
+          "checksum": "sha256-MlhrQGeev0axTvITq2iqBlu8caZjgz9plPEXaEYZG5I="
+        },
+        "checksum": "Q1pd7MNLZ6Hhu/zDZ7K+4UO3H8o+I="
+      }
+    ]
+  }
+}
